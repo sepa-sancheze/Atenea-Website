@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./Components/App/App.tsx";
-import "./index.css";
+import LandingPage from "./Components/LandingPage/LandingPage.tsx";
+import "./style.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <LandingPage />
+  </React.StrictMode>
 );
