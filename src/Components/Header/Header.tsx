@@ -1,38 +1,29 @@
-import { useState } from "react";
-
-function Header() {
-  const [showMenu, setShowMenu] = useState(false);
-
+export default function Example() {
   return (
-    <>
-      <header className="flex flex-row items-center justify-between sm:justify-around p-2 border-b-2 bg-gray-100">
+    <header className="px-4 lg:px-6 h-14 flex items-center">
+      <a href="#" className="flex items-center justify-center">
+        <span className="sr-only">IT Services Company</span>
+      </a>
+      <nav className="ml-auto flex gap-4 sm:gap-6">
         <a
-          href="/"
-          className="flex items-center h-10 px-10 bg-gradient-to-r from-gray-900 via-gray-600 to-gray-500 rounded-tl-full rounded-br-full font-bold uppercase italic text-white hover:opacity-90"
+          href="#"
+          className="text-sm font-medium hover:underline underline-offset-4"
         >
-          AteneaLogo
+          Services
         </a>
-        <nav className="hidden sm:flex justify-between items-center gap-4 font-semibold">
-          <a href="#">Home</a>
-          <a href="#">About</a>
-          <a href="#">Contact</a>
-        </nav>
-        <nav className="sm:hidden flex flex-col items-end gap-1 font-semibold">
-          <button onClick={() => setShowMenu(!showMenu)}>
-            {showMenu ? "Menu" : "X"}
-          </button>
-
-          {showMenu && (
-            <>
-              <a href="#">Home</a>
-              <a href="#">About</a>
-              <a href="#">Contact</a>
-            </>
-          )}
-        </nav>
-      </header>
-    </>
+        <a
+          href="#"
+          className="text-sm font-medium hover:underline underline-offset-4"
+        >
+          About
+        </a>
+        <a
+          href="#"
+          className="text-sm font-medium hover:underline underline-offset-4"
+        >
+          Contact
+        </a>
+      </nav>
+    </header>
   );
 }
-
-export default Header;
